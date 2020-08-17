@@ -1,18 +1,20 @@
-# name: JS Actions
+name: JS Actions
 
-# on: [push]
+on:
+  pull_request:
+    types: [labeled]
 
-# jobs:
-#   action:
+jobs:
+  action:
 
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - uses: actions/checkout@v1
+    steps:
+    - uses: actions/checkout@v1
 
-#     - name: hello-action
-#       uses: ./.github/actions/hello-world
-#       with:
-#         first-greeting: "Gabriel"
-#         second-greeting: "Alex"
-#         third-greeting: "Mikel"
+    - name: hello-action
+      uses: ./.github/actions/hello-world
+      with:
+        first-greeting: "Gabriel"
+        second-greeting: "Alex"
+        third-greeting: "Mikel"
