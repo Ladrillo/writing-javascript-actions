@@ -1,6 +1,8 @@
 name: JS Actions
 
-on: [push]
+on:
+  pull_request:
+    types: [labeled]
 
 jobs:
   action:
@@ -16,3 +18,5 @@ jobs:
         first-greeting: "Gabriel"
         second-greeting: "Alex"
         third-greeting: "Mikel"
+    - name: joke-action
+      uses: ./.github/actions/joke-action
