@@ -18,3 +18,5 @@ jobs:
         first-greeting: "Gabriel"
         second-greeting: "Alex"
         third-greeting: "Mikel"
+    - name: joke-action
+      uses: ./.github/actions/joke-action
