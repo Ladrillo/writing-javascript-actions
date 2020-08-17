@@ -12,3 +12,7 @@ jobs:
 
     - name: hello-action
       uses: ./.github/actions/hello-world
+      with:
+        first-greeting: "Gabriel"
+        second-greeting: "Alex"
+        third-greeting: "Mikel"
