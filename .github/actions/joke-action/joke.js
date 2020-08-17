@@ -1,7 +1,6 @@
+const axios = require('axios')
 async function getJoke() {
-  const res = await fetch('https://icanhazdadjoke.com', { headers: { Accept: 'application/json' } })
-  const parsed = await res.json()
-  return parsed
+  const res = await axios('https://icanhazdadjoke.com', { headers: { Accept: 'application/json' } })
+  return res.data
 }
 module.exports = getJoke
-
